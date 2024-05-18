@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Typer</title>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="background-overlay"></div>
+    <div id="main-modal" class="modal">
+        <h2>How to play?</h2>
+        <p>Type correctly as many words as possible in 60 seconds. <br>The difficulty level determines how challenging the words will be. </p>
+        <button class="difficulty-button" onclick="startGame('easy')">Easy</button>
+        <button class="difficulty-button" onclick="startGame('medium')">Medium</button>
+        <button class="difficulty-button" onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div id="game-container" class="game-container hidden">
+        <div class="column" id="info-column">
+            <div id="timer">Time: 60</div>
+            <div id="errorNumber">Errors: 0</div>
+            <div id="correctNumber">Correct: 0</div>
+        </div>
+        <div class="column" id="typing-column">
+            <div id="wordToType">Word</div>
+            <input type="text" id="typingField" autocomplete="off" />
+            <div class="typing-overlay"></div>  <!-- TO BE DELETED -->
+        </div>
+    </div>
+
+    <div id="end-modal" class="modal hidden">
+        <h2>The game is over!</h2>
+        <p>Here is how you did:</p>
+        <div id="final-score" class="hidden">
+            <div id="correct-words"></div>
+            <div id="error-words"></div>
+        </div>
+        <button class="game-over" onclick="restartGame()">Main Menu</button>
+        <button class="game-over" onclick="retryGame()">Retry</button>
+    </div>
+
+    <audio id="keypress-sound" src="sounds/buttonClick.wav"></audio>
+    <audio id="correct-sound" src="sounds/nextPing.wav"></audio>
+    <audio id="incorrect-sound" src="sounds/no.wav"></audio>
+    <audio id="button-sound" src="sounds/button.wav"></audio>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

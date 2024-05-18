@@ -1,0 +1,130 @@
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px 50px 60px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1em;  /*  Select difficulty font size  */
+}
+
+.difficulty-button,
+.game-over {
+    background: rgb(237, 0, 130);
+    background-image: linear-gradient(to bottom right, rgb(228, 3, 3), rgb(226, 146, 18));
+    color: white;
+    border: none;
+    padding: 20px 40px 8px 40px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.8em;  /*  Buttons font size  */
+    font-family: Minecraftia, sans-serif;
+    font-weight: bold;
+}
+
+.difficulty-button:hover {
+    background: darkred;
+}
+
+.game-container {
+    justify-content: space-between;
+    padding: 20px;
+    position: absolute; 
+    top: 50%; /* Center the container vertically */
+    left: 50%; /* Center the container horizontally */
+    transform: translate(-50%, -50%); /* Center the container perfectly */
+    height: 900px; 
+    width: 1440px; 
+    z-index: 1; /* Ensure the game container is above the modal */
+    font-size: 3em;
+}
+
+#info-column
+{
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    line-height: 110px;
+    color:rgb(76, 40, 12);
+    font-size: 0.8em;
+}
+
+#typing-column {
+    position: absolute;
+    top: 100px;
+    left: 350px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 810px;
+}
+
+
+#wordToType {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 65%;
+    background-color: rgba(0, 0, 0, 0.2); /* Black background with 30% opacity */
+    padding: 30px 150px 0px 150px;
+
+}
+
+#typingField {
+    padding: 10px;
+    font-size: 35px;
+    width: 400px;
+    margin-top: 180px;
+    margin-left: 60%;
+    background-color: transparent; /* Set background color to transparent */
+    color: rgb(0, 0, 0); /* Text color for contrast */
+    border: none; /* Remove border */
+    height: 80px;
+    text-align: center;
+    outline: none; /* Remove default focus outline */
+}
+
+#typingField:focus {
+    border: none; /* Remove focus border */
+}
+
+#typingField.correct {
+    color: green;
+}
+
+#typingField.incorrect {
+    color: red;
+}
+
+#end-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px 80px 60px 80px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.2em;  /*  Select difficulty font size  */
+}
+
+#final-score {
+    margin-top: 20px; /* Add margin to separate from the title */
+    color:rgb(209, 67, 11);
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+#correct-words,
+#error-words {
+    display: block;
+    margin-bottom: 10px; /* Add some spacing between the lines */
+}
