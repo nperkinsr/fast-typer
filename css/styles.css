@@ -41,8 +41,8 @@
     top: 50%; /* Center the container vertically */
     left: 50%; /* Center the container horizontally */
     transform: translate(-50%, -50%); /* Center the container perfectly */
-    height: 900px; 
-    width: 1440px; 
+    height: 750px; 
+    width: 1200px; 
     z-index: 1; /* Ensure the game container is above the modal */
     font-size: 3em;
 }
@@ -50,8 +50,8 @@
 #info-column
 {
     position: absolute;
-    top: 80px;
-    left: 100px;
+    top: 30px;
+    left: 0px;
     line-height: 110px;
     color:rgb(76, 40, 12);
     font-size: 0.8em;
@@ -59,12 +59,12 @@
 
 #typing-column {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 350px;
     display: flex; /* Use flexbox */
     flex-direction: column; /* Arrange items vertically */
     align-items: center; /* Center items horizontally */
-    width: 810px;
+    width: 635px;
 }
 
 
@@ -80,13 +80,13 @@
 #typingField {
     padding: 10px;
     font-size: 35px;
-    width: 400px;
-    margin-top: 180px;
-    margin-left: 60%;
-    background-color: transparent; /* Set background color to transparent */
+    width: 460px;
+    margin-top: 140px;
+    margin-left: 65%;
+    background-color: rgba(255, 0, 0, 0); /* Set background color to transparent */
     color: rgb(0, 0, 0); /* Text color for contrast */
     border: none; /* Remove border */
-    height: 80px;
+    height: 120px;
     text-align: center;
     outline: none; /* Remove default focus outline */
 }
