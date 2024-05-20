@@ -27,6 +27,7 @@ function startGame(difficulty) {
     resetGame();
     startTimer();
     setNewWord();
+document.getElementById('typingField').focus();  // Focus the typing field
 }
 
 function resetGame() {  //This is for when the player resets the game
