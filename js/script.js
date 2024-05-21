@@ -1,3 +1,4 @@
+
 let words = {
     easy: ["cake", "idea", "mile", "open", "tall", "pink", "quit", "spin", "urge", "zest", "apple", "dance", "hello", "jelly", "laser", "novel", "puppy", "quack", "vivid", "whale", "bird", "bell", "tree", "lock", "milk", "duck", "moon", "rain", "foot", "gold", "star", "hope", "wind", "home", "fire", "gift", "desk", "book", "drop", "jump", "lamp", "play", "town", "pool", "test", "hill", "rock", "swim", "ball", "kite", "fish", "crab", "frog", "hat", "sand", "plant", "rice", "wave", "sock", "pear", "bone", "chair", "sail", "ship", "deer", "plum", "sled", "wand", "swan", "drum", "trip", "mint", "corn", "wing", "boat", "dust", "grip", "horn", "leaf", "curl", "twig", "tape", "yarn", "nest", "fork", "brush", "snip", "nail", "rug", "plug", "bowl", "sink", "snack", "chat", "face", "hunt", "mark", "neck", "oven", "sale", "time", "vest", "word", "band", "card", "dart", "flag", "goat", "hail", "itch", "lake", "pair", "quiz", "road", "tale", "vase", "zebra", "cloud", "eagle", "floor", "ghost", "horse", "juice", "kiwi", "lemon", "music", "night", "peach", "queen", "river", "snake", "tiger", "uncle", "voice", "water"],
     medium: ["notepad", "cupcake", "bluejay", "sunrise", "starlit", "sandals", "popcorn", "glacier", "treetop", "fantasy", "firefly", "pioneer", "overlap", "cascade", "rainbow", "peacock", "journey", "muffins", "surgeon", "jukebox", "sidecar", "blanket", "grocery", "airport", "enlarge", "compile", "crimson", "enchant", "freight", "garland", "holiday", "iceberg", "jewelry", "kidneys", "laundry", "mailbox", "nightly", "octagon", "picture", "quality", "railway", "skylark", "tourism", "unicorn", "variety", "workout", "zealots", "adviser", "bandage", "caramel", "digital", "erosion", "forgive", "gingham", "harvest", "install", "journey", "kindred", "lullaby", "monitor", "nostrum", "opinion", "pursuit", "quantum", "release", "service", "torrent", "upstart", "village", "warrior", "zephyr", "almonds", "brocade", "custard", "diamond", "empower", "feather", "glimmer", "horizon", "infancy", "jackpot", "kitchen", "library", "mantled", "natural", "optical", "picture", "qualify", "respect", "sincere", "tourist", "unfolds", "various", "welcome", "zeniths", "aviator", "boulder", "creator", "drizzle", "elastic", "flaming", "gardens", "highway", "isotope", "justice", "kissing", "lettuce", "machine", "nimble", "orchard", "passion", "quintet", "remnant", "seaside", "teacher", "upscale", "venture", "wealthy", "zipline"],
@@ -107,12 +108,15 @@ function checkInput() {
 function endGame() {
     document.getElementById('game-container').classList.add('hidden');  // Hides the game container element by adding the 'hidden' class
     document.getElementById('end-modal').classList.remove('hidden');  // Shows the end modal element by removing the 'hidden' class
-    
+
+    const chosenDifficultyDiv = document.getElementById('chosen-difficulty');  // Retrieves the element for displaying the chosen difficulty
     const correctWordsDiv = document.getElementById('correct-words');  // Retrieves the element that displays the number of correct words for the score
     const errorWordsDiv = document.getElementById('error-words');  // Retrieves the element that displays the number of errors for the score
-    
-    correctWordsDiv.innerText = `Correct: ${correct}`;  // Sets the inner text of the correct words element to display the count of correct words
-    errorWordsDiv.innerText = `Errors: ${errors}`;  // Sets the inner text of the error words element to display the count of errors
+
+
+    chosenDifficultyDiv.innerText = `Difficulty:  ${currentDifficulty}`;  // Sets the inner text to display the chosen difficulty
+    correctWordsDiv.innerText = `Correct:  ${correct}`;  // Sets the inner text of the correct words element to display the count of correct words
+    errorWordsDiv.innerText = `Errors:  ${errors}`;  // Sets the inner text of the error words element to display the count of errors
 
     document.getElementById('final-score').classList.remove('hidden');  // Shows the final score element within the mainModal by removing the 'hidden' class
 }
@@ -147,7 +151,7 @@ document.querySelectorAll('.difficulty-button, .game-over').forEach(button => {
 
 // Ensure window size is 1200x750
 function setWindowSize() {
-    window.resizeTo(1200, 750);
+    window.resizeTo(1000, 625);
 }
 
 window.onload = function() {
@@ -159,8 +163,8 @@ window.onload = function() {
 
 function disableResize() {
     window.addEventListener('resize', function() {
-        if (window.outerWidth !== 1200 || window.outerHeight !== 750) {
-            window.resizeTo(1200, 750);
+        if (window.outerWidth !== 1000 || window.outerHeight !== 625) {
+            window.resizeTo(1000, 625);
         }
     });
 }
