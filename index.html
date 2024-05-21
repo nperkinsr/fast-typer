@@ -19,13 +19,13 @@
 
     <div id="game-container" class="game-container hidden">
         <div class="column" id="info-column">
-            <div id="timer">Time: 60</div>
+            <div id="timer">Time: 60 sec</div>
             <div id="errorNumber">Errors: 0</div>
             <div id="correctNumber">Correct: 0</div>
         </div>
         <div class="column" id="typing-column">
             <div id="wordToType">Word</div>
-            <input type="text" id="typingField" autocomplete="off">
+            <input type="text" id="typingField" autocomplete="off" />
             <div class="typing-overlay"></div>  <!-- TO BE DELETED -->
         </div>
     </div>
@@ -34,6 +34,7 @@
         <h2>The game is over!</h2>
         <p>Here is how you did:</p>
         <div id="final-score" class="hidden">
+            <div id="chosen-difficulty"></div>
             <div id="correct-words"></div>
             <div id="error-words"></div>
         </div>
