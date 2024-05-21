@@ -10,17 +10,17 @@
     font-family: Minecraftia, sans-serif;
     background: url('bg/background.png') no-repeat center center fixed;
     background-size: cover;  /* This used to be Cover */
-    width: 1200px;
-    height: 750px;
+    width: 1000px;
+    height: 625px;
     background-attachment: fixed;
 }
 
-/*  This is the blue overlay for the second column 
+ /* This is the blue overlay for the second column 
 .typing-overlay {
     position: absolute;
     top: 0;
-    left: 250px;
-    width: 545px;
+    left: 300px;
+    width: 450px;
     height: 100%;
     background-color: rgba(0, 0, 255, 0.5);
     z-index: 1;
