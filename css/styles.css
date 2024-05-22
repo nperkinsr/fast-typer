@@ -114,22 +114,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
     font-size: 0.8em;  /*  Select difficulty font size  */
+    width: 70%;
 }
 
 #chosen-difficulty {
     color: black !important;
-    padding-bottom: 20px !important;
+    padding-top: 20px;
 }
 
 #final-score {
-    margin-top: 20px; /* Add margin to separate from the title */
+    margin: auto;
     color:rgb(238, 67, 0);
     font-size: 1.3em;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    background-color:rgba(218, 213, 222, 0.469);
+    width: 50%;
+    margin-bottom: 20px;
 }
 
 #correct-words,
 #error-words {
     display: block;
-    margin-bottom: 10px; /* Add some spacing between the lines */
 }
